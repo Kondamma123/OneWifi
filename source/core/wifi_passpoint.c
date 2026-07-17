@@ -722,7 +722,8 @@ INT WiFi_SetGasConfig(char *JSON_STR)
       return RETURN_ERR;
 #else
     UNREFERENCED_PARAMETER(JSON_STR);
-#endif 
+#endif
+    cJSON_Delete(passPointCfg);
     return RETURN_ERR;
 }
 
